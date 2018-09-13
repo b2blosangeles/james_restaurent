@@ -1,9 +1,6 @@
-let cfg0 = {
-        "host":"localhost",
-        "user":"webuser",
-        "password":"Montreal107#",
-        "database":"test"
-};
+delete require.cache['/var/qalet_config.json'];
+var config = require('/var/qalet_config.json');
+var cfg0 = config.database;
 var connection = pkg.mysql.createConnection(cfg0);
 connection.connect();
 var str = "SELECT * FROM `menu`; ";
