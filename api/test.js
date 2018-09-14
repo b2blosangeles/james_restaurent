@@ -1,3 +1,5 @@
+res.send(env);
+return true;
 delete require.cache['/var/qalet_config.json'];
 var config = require('/var/qalet_config.json');
 var cfg0 = config.database;
