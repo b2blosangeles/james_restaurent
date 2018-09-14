@@ -1,8 +1,4 @@
-res.send(env);
-return true;
-delete require.cache['/var/qalet_config.json'];
-var config = require('/var/qalet_config.json');
-var cfg0 = config.database;
+var cfg0 = env.site_config.database;
 var connection = pkg.mysql.createConnection(cfg0);
 connection.connect();
 var str = "SELECT * FROM `menu`; ";
